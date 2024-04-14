@@ -1688,12 +1688,14 @@
                 var name = document.getElementById("name");
                 var collage = document.getElementById("collage");
                 var fdyname = document.getElementById("fdyname");
+                var tips = document.getElementById("tips")
                 var modify = document.getElementById("modify");
                 if (this.ismodify) {
                     this.issp = "点击生成随机时间",
                         name.removeAttribute("readonly", "");
                     collage.removeAttribute("readonly", "");
                     fdyname.style = "display: true;"
+                    tips.style = "display: true;"
                     modify.removeAttribute("hidden", "");
                     //alert("解锁");
                     dd.device.notification.vibrate({
@@ -1710,6 +1712,7 @@
                         name.setAttribute("readonly", "");
                     collage.setAttribute("readonly", "");
                     fdyname.style = "display: none;"
+                    tips.style = "display: none;"
                     modify.setAttribute("hidden", "");
                     //alert("锁定");
                     dd.device.notification.vibrate({
